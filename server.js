@@ -33,21 +33,21 @@ server.register(require('inert'), (err) => {
     }
   });
 
-  server.route({  
-    method: 'GET',
-    path: '/dist/build.js',
-    handler: function (request, reply) {
-      reply.file('./dist/build.js')
-    }
-  })
+  // server.route({  
+  //   method: 'GET',
+  //   path: '/dist/build.js',
+  //   handler: function (request, reply) {
+  //     reply.file('./dist/build.js')
+  //   }
+  // })
 
-  server.route({
-    method: 'GET',
-    path: '/node_modules/bootstrap/dist/css/bootstrap.css',
-    handler: function (request, reply) {
-      reply.file('./node_modules/bootstrap/dist/css/bootstrap.css');
-    }
-  });
+  // server.route({
+  //   method: 'GET',
+  //   path: '/node_modules/bootstrap/dist/css/bootstrap.css',
+  //   handler: function (request, reply) {
+  //     reply.file('./node_modules/bootstrap/dist/css/bootstrap.css');
+  //   }
+  // });
 
   server.route({
     method: 'GET',
