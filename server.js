@@ -7,7 +7,7 @@ const server = new Hapi.Server();
 
 var port = process.env.PORT || 3000;
 
-server.connection({ port: port, host: 'localhost' });
+server.connection({ port: port });
 
 server.register(require('inert'), (err) => {
 
