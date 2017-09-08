@@ -4,7 +4,9 @@ const fs = require('fs');
 const functions = require('./functions');
 
 const server = new Hapi.Server();
-server.connection({ port: 1999, host: 'localhost' });
+
+var port = process.env.WEBPACK_PORT || 3000
+server.connection({ port: port, host: 'localhost' });
 
 server.register(require('inert'), (err) => {
 
