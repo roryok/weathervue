@@ -10,7 +10,7 @@ module.exports = {
     let ip = request.connection.remoteAddress;
     ip = (ip == '127.0.0.1' ? '77.95.165.9' : ip)
     let url = `https://freegeoip.net/json/${ip}`
-    console.log(url, request.connection);
+    return reply(JSON.stringify( { url, request.connection } ));
     Req(url, (err, response, json) => {
       if (err) throw err;
       return reply(json.replace('Connaught','Connacht'));             
