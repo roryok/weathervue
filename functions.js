@@ -7,7 +7,7 @@ module.exports = {
 
   // bypass CORS issues this way
   getLocation: (request, reply) => {
-    let ip = request.connection.info.address;
+    let ip = request.connection.remoteAddress;
     ip = (ip == '127.0.0.1' ? '77.95.165.9' : ip)
     Req(`https://freegeoip.net/json/${ip}`, (err, response, json) => {
       if (err) throw err;
